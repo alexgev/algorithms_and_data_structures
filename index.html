@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        class List {
+            constructor() {
+                this.memory = [];
+                this.length = 0;
+            }
+            get(adress) {
+                return this.memory[adress];
+            }
+            push(value) {
+                this.memory[this.length] = value;
+                this.length++;
+            }
+            pop() {
+                if (this.length === 0) return;
+                let lastAddress = this.length - 1;
+                let value = this.memory[lastAddress];
+                delete this.memory[lastAdress];
+                this.length--;
+
+                return value
+            }
+        }
+    </script>
+</body>
+</html>
