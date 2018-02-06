@@ -127,6 +127,29 @@
                 return this.list[this.length - 1];
             }
         }
+        class Queue {
+
+            constructor() {
+                this.list = [];
+                this.length = 0;
+            }
+
+            enqueue(value) {
+                this.length++;
+                this.list.push(value);
+            }
+            dequeue() {
+                // Нет элементов — ничего не делаем.
+                if (this.length === 0) return;
+
+                // Убираем первый элемент методом shift и возвращаем значение.
+                this.length--;
+                return this.list.shift();
+            }
+            peek() {
+                return this.list[0];
+            }
+        }
     </script>
 </body>
 </html>
